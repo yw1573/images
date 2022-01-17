@@ -52,6 +52,8 @@ Then I want to start the tunnel on 10.0.13.10 also to link with 10.0.13.35
 
 As you can see, the link is successful
 
+But the tunnel with 10.0.13.9 is gone and terminated
+
 #### 10.0.13.35:
 
 ![11](11.png)

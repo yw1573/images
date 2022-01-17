@@ -1,8 +1,8 @@
-## Description of the problem of splitting tunnel configuration files in the /etc/ipsec/ directory
+### Description of the problem of splitting tunnel configuration files in the /etc/ipsec/ directory
 
-### My scenario is as follow:
+My scenario is as follow:
 
-![topology](./1.png)
+![1](1.png)
 
 Mainly look at the ipsec configuration of VPN1
 
@@ -36,7 +36,7 @@ conn 13_10
 
 Then I executed the command: ipsec restart
 
-<img src="./2.png" alt="2"  />
+![2](2.png)
 
 That's right, in this case, the VPN1-VPN2, VPN1-VPN3 tunnels are loaded
 

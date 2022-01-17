@@ -1,12 +1,8 @@
----
-typora-root-url: ./
----
-
 ## Description of the problem of splitting tunnel configuration files in the /etc/ipsec/ directory
 
 ### My scenario is as follow:
 
-![topology](/1.png)
+![topology](./1.png)
 
 Mainly look at the ipsec configuration of VPN1
 
@@ -40,13 +36,13 @@ conn 13_10
 
 Then I executed the command: ipsec restart
 
-<img src="/2.png" alt="2"  />
+<img src="./2.png" alt="2"  />
 
 That's right, in this case, the VPN1-VPN2, VPN1-VPN3 tunnels are loaded
 
 I have configured on VPN2 and VPN3 and it is linked, I use the command again on VPN1: ipsec statusall
 
-![3](/3.png)
+![3](./3.png)
 
 This configuration is OK, and the communication is also OK
 
@@ -63,29 +59,29 @@ include /etc/ipsec/*.conf
 include /etc/ipsec/*.secrets
 ```
 
-![4](/4.png)
+![4](./4.png)
 
 
 
-![5](/5.png)
+![5](./5.png)
 
 Then I add default.conf, 13_9.conf, 13_9.secrets files in the /etc/ipsec/ directory
 
-![6](/6.png)
+![6](./6.png)
 
 Then I execute the commands: ipsec restart and ipsec statusall
 
-![7](/7.png)
+![7](./7.png)
 
 OK, the tunnel of VPN1-VPN2 has been established and the communication is normal
 
 Then I need to newly create 13_10.conf and 13_10.secrets files in the /etc/ipsec/ directory of VPN1 to configure the IPSec tunnel with VPN3
 
-![8](/8.png)
+![8](./8.png)
 
 Let's execute a command on VPN1 before loading the 13_10 configuration file: ipsec statusall
 
-![10](/10.png)
+![10](./10.png)
 
 Yes, the newly created tunnel configuration file is not loaded, now let's load this configuration file
 
@@ -93,5 +89,5 @@ I now want to load the VPN1-VPN3 tunnel, but I can't use the command: ipsec rest
 
 Oh shit, he actually succeeded
 
-![11](/11.png)
+![11](./11.png)
 

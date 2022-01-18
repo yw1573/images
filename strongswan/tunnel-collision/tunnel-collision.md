@@ -67,3 +67,8 @@ and I scraped the logs on 10.0.13.9
 ![13](13.png)
 
 I don't know much about the underlying problem, I want to know how this is caused and how should I deal with it
+
+This situation occurs mainly because the config setup option is not set
+
+ Use different identities or disable `uniqueids` (see [ConfigSetupSection](https://wiki.strongswan.org/projects/strongswan/wiki/ConfigSetupSection)). 
+
